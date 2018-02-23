@@ -1,0 +1,772 @@
+﻿/********************************************************************************
+** 作者： 张青云
+** 创始时间：2016年12月3日
+** 修改人：
+** 修改时间：
+** 描述：css样式
+*********************************************************************************/
+
+.body 
+{
+    width:100%; height:auto; margin:0 auto; background-color:#f5f5f5;
+}
+
+/*页面顶部........................................................................*/
+.Top 
+{
+    width:100%; height:170px;background-color:#6fc9d3;
+}
+
+.t_title
+{ width:1060px;position:relative;margin:0 auto; height:120px; opacity:0.8;}
+
+.t_t_1
+{ width:60%; height:110px; margin-top:5px; float:left;}
+
+.t_logo
+{ height:100px; width:200px; cursor:pointer; margin-left:10px; margin-top:5px; float:left;}
+
+.t_show
+{ height:100px; width:200px; margin-left:10px; margin-top:5px; float:left;}
+
+.t_t_2
+{ width:40%; height:110px; margin-top:5px; float:left;}
+
+.t_search
+{ width:168px; height:60px; margin-top:44px; float:left; }
+.t_login
+{width:100px; height:60px; margin-top:45px; float:left; margin-left:15px;}
+
+.t_menmue
+{ width:100%; height:50px; background-color:#454545;}
+.t_menmue2
+{ width:100%; height:50px; background-color:#262626;position:fixed;top:0;z-index:300;opacity:0.8;}
+
+.t_m_btn
+{ height:35px; width:120px; color:#f0ecdb; margin-top:15px; float:left; text-align:center; font-family:Arial, Helvetica, sans-serif; font-weight:bold; }
+
+    .t_m_btn span {
+        cursor:pointer;color:#f0ecdb;
+    }
+
+    .t_m_btn span:hover {
+        cursor:pointer;color:#168391;
+    }
+
+.user_boxs
+{
+    float:left;width:120px;height:32px;margin-top:38px;margin-left:10px;display:none;cursor:pointer
+}
+
+.user_img_boxs 
+{
+    float:left;width:32px;height:32px; margin-top:0px;
+}
+
+.user_name_boxs 
+{
+    float:left;width:80px;height:32px;margin-top:0px;
+}
+
+.user_boxs:hover {
+    float:left;width:120px;height:32px;margin-top:38px;margin-left:10px;display:none;cursor:pointer;background-color:#bad424
+}
+
+
+/*图片滑动............................................................................*/
+.PicSlild 
+{
+     width:100%; height:550px; background-color:#f5f5f5;
+}
+
+/*内容框架.....................................................................................*/
+.Content 
+{
+    width:100%; height:580px ;margin:0 auto;margin-top:60px
+}
+
+.C_pic 
+{
+    width:1060px;
+    height:560px;
+    position:relative;
+    margin:0 auto;
+    background-repeat:no-repeat;
+    z-index:5;
+}
+
+.C_pic2 
+{
+    width:1060px;
+    height:560px;
+    position:relative; 
+    background-image:url(../img/Backg2.png);
+    margin:0 auto;
+    background-repeat:no-repeat;
+}
+
+.C_pic_DownApp {
+    
+    width: auto;
+    height: auto;
+    float:left;   
+    margin-top:320px;
+    margin-left:316px;
+    
+}
+
+/*旅游攻略.........................................................................................*/
+.C_Trip 
+{
+    width:100%;
+    height:auto;
+    background-color:#f5f5f5;
+}
+
+.C_T_title 
+{
+    width:1060px;
+    height:90px; 
+    margin:0 auto;
+}
+
+.C_T_name 
+{
+    width:130px;
+    height:60px; 
+    float:left; 
+    margin-top:30px;
+}
+
+.C_T_more 
+{
+    width:100px; 
+    height:60px; 
+    float:left; 
+    margin-top:30px; 
+    margin-left:830px;
+    text-decoration: none;
+}
+
+.C_T_Content 
+{
+    width:1060px; 
+    height:580px; 
+    margin:0 auto;
+}
+
+.c_t_conPlan1
+{ 
+    width:1060px; 
+    height:270px; 
+    margin-top:5px;
+
+}
+.c_t_conPlan2
+{
+    width:1060px; 
+    height:270px; 
+    margin-top:5px;
+
+}
+
+.c_t_cP1
+{ 
+    width:255px; 
+    height:255px; 
+    float:left; 
+    margin-left:10px; 
+    margin-top:10px;}
+.c_t_cPimg
+{ 
+    width:255px; 
+    height:255px; 
+    position:relative; 
+    cursor:pointer;}
+.c_t_cP2
+{ 
+    width:200px; 
+    height:45px; 
+    z-index:100; 
+    margin-left:40px; margin-top:200px; position:absolute; font-size:28px; font-family:微软雅黑; font-weight:400; color:#FFF;
+
+}
+
+/*用户发布界面*/
+.C_user_content 
+{
+    width:1060px;
+    height:730px;
+    margin:0 auto;
+}
+
+.C_user_c1 
+{
+    width:1060px;
+    height:365px;
+}
+
+.C_user_c_new 
+{
+    width:255px; 
+    height:345px; 
+    float:left; margin-top:10px; margin-left:10px; background-color:#FFF;
+}
+
+.C_user_c_img 
+{
+    width:255px; 
+    height:232px;
+    cursor:pointer
+}
+
+.C_user_c_txt 
+{
+    width:255px; 
+    height:115px;
+}
+
+.C_user_c_theme 
+{
+    width:255px; 
+    height:40px;
+}
+
+.C_user_c_word 
+{
+    color:#686868; 
+    font-weight:bold; 
+    font-family:宋体; 
+    font-size:20px; 
+    margin-left:10px; 
+    margin-top:18px;
+    
+}
+
+.C_user_c_word span {
+        cursor:pointer;
+    }
+
+ .C_user_c_word span:hover {
+        cursor:pointer;color:#168391;
+    }
+
+.C_user_c_adic 
+{
+    width:255px; 
+    height:75px;
+}
+
+.C_user_c_adress 
+{
+    width:169px; 
+    height:75px; 
+    float:left;
+}
+
+.C_user_c_swordt 
+{
+    color:#979797; 
+    font-weight:400; 
+    font-family:微软雅黑; font-size:12px; margin-left:10px; margin-top:0px;
+}
+
+.C_user_c_swordp 
+{
+    color:#979797; font-weight:400; font-family:微软雅黑; font-size:12px; margin-left:10px; margin-top:2px;
+}
+
+.C_user_c_ico 
+{
+    width:86px; height:75px; float:left
+}
+
+.C_user_c_icopic 
+{
+    width:40px; height:40px; margin-left:20px; margin-top:10px; cursor:pointer
+}
+
+/*页面脚...........................................................................................*/
+.Foot 
+{
+    width:100%; height:300px;background-color:#1b1f28;
+}
+
+.F_bgpic 
+{
+    width:1060px;height:300px;margin:0 auto;background:url('../img/foot2.png')
+}
+
+.F_ptop 
+{
+    width:1060px;height:215px;
+}
+
+.F_pt_L 
+{
+    width:550px;height:215px; float:left;
+}
+
+    .F_pt_L div 
+    {
+        width:137px;height:215px;float:left;
+    }
+
+    .F_pt_L dl 
+    {
+        float:left;width:137px;height:215px;line-height:24px;
+    }
+
+        .F_pt_L dl dt 
+        {
+            font-size:16px;color:#5e6064;font-family:'Microsoft YaHei';margin-left:41px;margin-top:10px;font-weight:600;margin-bottom:10px;
+        }
+        .F_pt_L dl a 
+        {
+            font-size:14px;color:#5e6064;font-family:'Microsoft YaHei';margin-top:14px;font-weight:600
+        }
+
+.F_pt_C 
+{
+    width:310px;height:215px; float:left;
+}
+
+.F_pt_R 
+{
+    width:200px;height:215px; float:left;
+}
+
+.F_pbottom 
+{
+    width:1060px;height:85px;
+}
+
+
+/*登录界面........................................................................................*/
+.Login 
+{
+    width:530px;
+    height:355px;
+    margin:0 auto;
+    display:none;
+}
+
+.L_top 
+{
+    width:530px;
+    height:44px;
+}
+
+.L_line 
+{
+    width:494px;
+    height:1px;
+    margin-left:19px;
+    background-image:url(../pic/Line1.png)
+}
+    .L_top span 
+    {
+        float:left;
+        margin-top:12px;
+        margin-left:16px;
+        font-size:18px;
+        font-family: STSong;
+        color:#5c5c5c;
+        font-stretch:initial;
+    }
+    .L_t_close div 
+    {
+        cursor:pointer;
+        width:24px;
+        height:24px;
+        float:left;
+        margin-top:10px;
+        margin-left:437px;
+        background-image:url(../pic/Close1.png)
+    }
+        .L_t_close div:hover 
+        {
+            cursor:pointer;
+            width:24px;
+            height:24px;
+            float:left;
+            margin-top:10px;
+            margin-left:437px;
+            background-image:url(../pic/Close2.png)
+        }
+
+.L_content 
+{
+    width:530px;
+    height:310px;
+}
+
+.L_content_l 
+{
+    width:200px;
+    height:310px;
+    float:left;
+}
+
+.L_con_l_pic 
+{
+    height:65px;
+    width:200px;
+    margin-top:26px;
+}
+
+ .L_con_l_pic_div 
+    {
+        width:44px;
+        height:65px;
+        float:left;
+        margin-left:18px;
+        
+
+    }
+    .L_con_l_pic_div span 
+    {
+        margin-left:7px;
+        margin-bottom:1px;
+    }
+
+.L_con_l_p_pic 
+{
+    width:44px;
+    height:44px;
+    cursor:pointer;
+
+}
+
+.L_con_l_p_picWord 
+{
+    color:#4abdcc;
+    font-size:15px;
+    font-family: STSong;
+}
+
+.L_con_l_p_wxPic 
+{
+    background-image:url(../pic/weixin1.png);
+    width:44px;
+    height:44px;
+}
+
+    .L_con_l_p_wxPic:hover 
+    {
+        width:44px;
+        height:44px;
+        background-image:url(../pic/weixin2.png);
+    }
+
+.L_con_l_p_QQPic 
+{
+    background-image:url(../pic/QQ1.png);
+    width:44px;
+    height:44px;
+}
+    .L_con_l_p_QQPic:hover 
+    {
+        width:44px;
+        height:44px;
+        background-image:url(../pic/QQ2.png);
+    }
+
+.L_con_l_p_xinlangPic 
+{
+    background-image:url(../pic/xinlang1.png);
+    width:44px;
+    height:44px;
+}
+    .L_con_l_p_xinlangPic:hover 
+    {
+        width:44px;
+        height:44px;
+        background-image:url(../pic/xinlang2.png);
+    }
+
+
+.L_content_l2 
+{
+    height:259px;
+    width:1px;
+    margin-top:18px;
+    float:left;
+    background-image:url(../pic/Line2.png)
+}
+
+.L_content_r 
+{
+    width:329px;
+    height:310px;
+    float:left;
+}
+
+.L_content_r_top 
+{
+    height:40px;
+    width:329px;
+}
+
+    .L_content_r_top span 
+    {
+        color:#4abdcc;
+        font-size:17px;
+        font-family: STSong;
+        cursor:pointer;
+        float:left;
+        margin-top:15px;
+        margin-left:280px;
+    }
+
+.L_content_r_con
+{
+    height:38px;
+    width:290px;
+    line-height: 38px;
+    border: 1px solid #e7e7e7;
+    text-indent: 15px;
+    font-size: 16px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    
+}
+
+.L_content_r_con_text 
+{
+    width:300px;margin-left:20px;
+}
+
+.L_content_r_captcha
+{
+    height:38px;
+    width:190px;
+    line-height: 38px;
+    border: 1px solid #e7e7e7;
+    text-indent: 15px;
+    font-size: 16px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    float:left;
+    
+}
+
+    .L_content_r_con_text img 
+    {
+        height: 38px;
+        width: 94px;
+        vertical-align: bottom;
+        border: 1px solid #e7e7e7;
+        border-left: none;
+        float:left;
+        margin-top:10px;
+    }
+
+.L_content_r_con_notice 
+{
+    float:left;
+    margin-top:10px;
+}
+
+    .L_content_r_con_notice label 
+    {
+        margin-left:20px;
+        margin-top:10px;
+        color:#5c5c5c;
+        font-size:16px;
+        font-family: STSong;
+    }
+
+.L_content_r_con_btn 
+{
+    float:left;
+    margin-top:15px;
+    margin-left:20px;
+    
+}
+
+    .L_content_r_con_btn input 
+    {
+        width: 290px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #4abdcc;
+        -webkit-box-shadow: 0 2px #2e9dab;
+        -moz-box-shadow: 0 2px #2e9dab;
+         box-shadow: 0 2px #2e9dab;
+         font-size: 14px;
+         color: #fff;
+         text-align: center;
+         border: 0;
+         -webkit-border-radius: 3px;
+         -moz-border-radius: 3px;
+         -ms-border-radius: 3px;
+         -o-border-radius: 3px;
+         border-radius: 3px;
+         cursor: pointer;
+         -webkit-appearance: push-button;
+        -webkit-user-select: none;
+         white-space: pre;
+    }
+
+
+    /*注册界面........................................................................................*/
+.reg_signup_title {
+    border-bottom: 1px solid #eaeaea;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(234, 234, 234);
+    color: #5c5c5c;
+    font-size: 15px;
+    font-family:微软雅黑;
+    height: 40px;
+    line-height: 40px;
+    
+}
+.reg_center_align {
+    width: 930px;
+    height:565px;
+    margin: 0 auto;
+}
+
+.reg_c_left {
+    padding: 0;
+    width: 640px;
+    height:565px;
+    float: left;
+}
+.reg_c_l_right {
+    float:right;
+    padding: 0;
+    width: 260px;
+    height:565px;
+}
+.reg_c_right {
+    padding: 22px 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 22px;
+    padding-left: 0px;
+    width: 260px;
+    height:465px;
+    float: right;
+}
+
+.reg_clear_both {
+    width: 930px;
+    height:120px;
+    margin: 0 auto;
+}
+
+.reg_signup_form {
+    width:260px;
+    height:100%;
+    padding-top: 10px;
+    padding-right: 17px;
+    padding-bottom: 10px;
+    padding-left: 17px;
+    background-color: rgb(247, 247, 247);
+    float:left;
+}
+
+.reg_s_f_header {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(234, 234, 234);
+    font-size: 14px;
+    height: 30px;
+    line-height: 20px;
+
+}
+
+.reg_s_f_title {
+    float: left;
+    color: #5c5c5c;
+    font-size: 14px;
+    font-family:微软雅黑;
+    vertical-align: baseline;
+    margin-top:2px;
+}
+
+.reg_s_f_login {
+    float: right;
+    color: #5c5c5c;
+    font-size: 14px;
+    font-family:微软雅黑;
+    vertical-align: baseline;
+    margin-top:2px;
+}
+
+    .reg_s_f_login a {
+        cursor:pointer;
+        color: #4abdcc;
+    }
+
+.reg_s_f_form {
+    
+
+}
+
+.reg_form_lable {
+    color: #999999;
+    font-size: 12px;
+}
+.reg_form_text {
+
+}
+
+.reg_form_text input {
+    background: #eaeaea;
+    border: 0px solid #eaeaea;
+    height: 30px;
+    font-family:宋体;
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 10px;
+    width: 250px;
+    outline:none;
+    border:none;
+}
+
+    .reg_form_text span {
+    color: red;
+    font-size: 12px;
+    }
+
+.reg_form_pictext {
+    float:left;
+}
+
+    .reg_form_pictext input {
+    background: #eaeaea;
+    border: 0px solid #eaeaea;
+    height: 35px;
+    font-family:宋体;
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 10px;
+    width: 155px;
+    outline:none;
+    border:none;
+
+    }
+
+.terms {
+    color: #999999;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+

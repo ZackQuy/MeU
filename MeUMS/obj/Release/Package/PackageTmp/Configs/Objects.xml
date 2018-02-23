@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <!--设备查询服务-->
+  <object id="pagingQuery" type="Business.Controllers.TerminalControllers.PagingTerminalController, Business" />
+  <object id="getTerminalByCid" type="Business.Controllers.TerminalControllers.GetTerminalByCidController, Business" />
+  <object id="getSbCid" type="Business.Controllers.TerminalControllers.GetTerminalByCidController, Business" />
+  <object id="Inspection" type="Business.Controllers.TerminalControllers.InspectionController, Business" />
+  <object id="InsertJWD" type="Business.Controllers.TerminalControllers.InsertJWDController, Business" />
+  <object id="Exitdate" type="Business.Controllers.TerminalControllers.InspectionStopController, Business" />
+  <object id="InsertDataImg" type="Business.Controllers.TerminalControllers.InspectionDataImgController, Business" />
+  <object id="InsertImage" type="Business.Controllers.TerminalControllers.InspectionImageController, Business" />
+
+  <object id="InsertImgListContent" type="Business.Controllers.TerminalControllers.InspectionImageListController, Business" />
+  <!--用户信息操作-->
+  <object id="login" type="Business.Controllers.UserControllers.LoginController, Business" />
+  <object id="ReSetPwd" type="Business.Controllers.UserControllers.PwdResetController, Business" />
+  <object id="UpdataUser" type="Business.Controllers.UserControllers.UpdateUserController, Business" />
+  <object id="getUserByid" type="Business.Controllers.TerminalControllers.GetUserByidController, Business" />
+</objects>

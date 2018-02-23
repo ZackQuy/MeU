@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Android服务框架请求测试</title>
+    <script src="Scripts/Base/SpBaseCommonMin.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(jQueryReady);
+        var t1;
+        function jQueryReady() {
+            //#region 登录服务
+            $("#btnLogin").click(function () {
+                //登录测试
+                $("#btnLogin").attr({ "disabled": "disabled" }).val("用户登录中...");
+                var param = { UserName: $("#txtUserName").val().trim(), Password: $("#txtPassword").val().trim() };
+                var c = new Sp.ActionRequest("login", Sp.ToJson(param), { fn: loginRecive });
+                c.request({ url: 'ActionHandler.ashx', timeout: 120000 });
+            });
+            function loginRecive(action, data, status) {
+                //登录回调函数
+                $("#btnLogin").val("登录测试").removeAttr("disabled");
+                $("#ta_Detail").val(data);
+                
+                    var obj = eval('(' + data + ')');
+                // alert(obj.message.toString());
+                    if(obj.success.toString() == "true")
+                    {
+                        var objdata = obj.data.toString().split(";");
+                        $("#BackUsercid").val(objdata[0].toString());
+                        $("#BackUsername").val(objdata[1].toString());
+                    }
+                    
+                
+                
+            }
+            //#endregion
+            //#region 获取设备分页列表服务
+            $("#btnPaging").click(function () {
+                var keyWord = $("#txtKeyWord").val().trim();
+                var start = $("#txtStart").val().trim();
+                var pageSize = $("#txtPageSzie").val().trim(); 
+                var params = {}; //参数对象
+                params.start = start; //起始索引号
+                params.pageSize = pageSize; //每页的条数
+                params.whereClause = keyWord; //查询（不包括where关键字，如：name like '%关键字%'）
+                params.userName = "1172"; //用户编号
+                params.action = "pagingQuery";
+                params.tt = new Date().getTime();
+                $("#btnPaging").attr({ "disabled": "disabled" }).val("数据查询中...");
+                $.get("GetActionHandler.ashx", params, Sp.Delegate(this, pagingRecive));
+
+            });
+            function pagingRecive(response, status, xhr) {
+                //分页回调函数
+                $("#btnPaging").val("分页查询").removeAttr("disabled");
+                var data = Sp.ParseJson(response);
+                if (data.success) {
+                    $("#ta_Detail").val(response);
+                }
+                else {
+                    $("#ta_Detail").val(response);
+                }
+            }
+            //#endregion
+            //#region 获取设备详情
+            $("#btnGetTerminalByCid").click(function () {
+                var cid = $("#txtCid").val().trim();
+                var params = {};
+                params.cid = cid;
+                params.action = "getTerminalByCid";
+                params.tt = new Date().getTime();
+                $("#btnGetTerminalByCid").attr({ "disabled": "disabled" }).val("详情查询中...");
+                $.get("GetActionHandler.ashx", params, Sp.Delegate(this, detailRecive));
+            })
+            function detailRecive(response, status, xhr) {
+                //获取设备详情回调
+                $("#btnGetTerminalByCid").val("查询详情").removeAttr("disabled");
+                var data = Sp.ParseJson(response);
+                if (data.success) {
+                    $("#ta_Detail").val(response);
+                }
+                else {
+                    $("#ta_Detail").val(response);
+                }
+            }
+            //#endregion
+
+            //#region 修改密码
+            $("#btnPwdReset").click(function () {
+                var param = { oldPassword: $("#oldPassword").val().trim(), newPassword: $("#newPassword").val().trim(), rePassword: $("#rePassword").val().trim(), usercid: $("#BackUsercid").val().trim() };
+                var c = new Sp.ActionRequest("ReSetPwd", Sp.ToJson(param), { fn: loginRecive });
+                c.request({ url: 'ActionHandler.ashx', timeout: 120000 });
+
+                function loginRecive(action, data, status) {
+                    //回调函数                  
+                    $("#ta_Detail").val(data);
+                }
+            })
+            //#endregion
+
+            //#region更新用户数据
+            $("#UpdateUser").click(function () {
+                var param = { name: $("#name").val().trim(), phone: $("#phone").val().trim(), weixin: $("#weixin").val().trim(), usercid: $("#BackUsercid").val().trim() };
+                var c = new Sp.ActionRequest("UpdataUser", Sp.ToJson(param), { fn: loginRecive });
+                c.request({ url: 'ActionHandler.ashx', timeout: 120000 });
+
+                function loginRecive(action, data, status) {
+                    //回调函数                  
+                    $("#ta_Detail").val(data);
+                }
+            })
+            //得到用户详情数据
+            $("#getdata").click(function () {
+                var params = {};
+                params.usercid = $("#BackUsercid").val().trim();
+                params.action = "getUserByid";
+                params.tt = new Date().getTime();
+                $("#getdata").attr({ "disabled": "disabled" }).val("详情查询中...");
+                $.get("GetActionHandler.ashx", params, Sp.Delegate(this, UdetailRecive));
+            })
+            function UdetailRecive(response, status, xhr) {
+                //获取用户详情回调
+                $("#getdata").val("查询详情").removeAttr("disabled");
+                // var obj = Sp.ParseJson(response);
+                
+               // alert(obj.data[0].xm);
+                
+                if (response != null) {
+                    var obj = eval('(' + response + ')');
+                    $("#ta_Detail").val(response);
+                   // $("#name").val(obj[0].xm).toString();
+                   // $("#phone").val(obj[0].dh).toString();
+                  //  $("#weixin").val(obj[0].wx).toString();
+                  //  $("#department").val(obj[0].bmmc).toString();
+                }
+                else {
+                    $("#ta_Detail").val("获取用户异常！");
+                }
+            }
+            //#endregion
+            //#region获取设备详情数据
+            $("#getSbCid").click(function () {
+                var params = {};
+                params.cid = $("#Unicid").val().trim();
+                params.action = "getSbCid";
+                params.tt = new Date().getTime();
+                $("#getSbCid").attr({ "disabled": "disabled" }).val("详情查询中...");
+                $.get("GetActionHandler.ashx", params, Sp.Delegate(this, getSBXQ));
+            })
+            function getSBXQ(response, status, xhr) {
+                //获取详情回调
+                $("#getSbCid").val("查询详情").removeAttr("disabled");
+                var data = Sp.ParseJson(response);
+               // var obj = eval('(' + response + ')');
+                //$("#jxh").val(obj[0].jxh).toString();
+               // $("#sbh").val(obj[0].sbbm).toString();
+              //  $("#jkfl").val(obj[0].jkfl).toString();
+              //  $("#mc").val(obj[0].sbmc).toString();
+              //  $("#ddwzX").val(obj[0].jd).toString();
+              //  $("#ddwzY").val(obj[0].wd).toString();
+              //  $("#sssq").val(obj[0].jdmc).toString();
+             //   $("#lxrdh").val(obj[0].lxdh).toString();
+             //   $("#sbtp").val(obj[0].sbtp).toString();
+              //  $("#ssdw").val(obj[0].ssdw).toString();
+             //   $("#dwdz").val(obj[0].dwdz).toString();
+             //   $("#dwlxr").val(obj[0].dwlxr).toString();
+
+                if (data.success) {
+                    $("#ta_Detail").val(response);
+
+                }
+                else {
+                    $("#ta_Detail").val(response);
+                }
+            }
+            //#endregion
+
+
+
+            
+            //#dregion 开始巡检记录
+            $("#ksxj").click(function () {
+                $("#xjjd").val(Math.random());
+                $("#xjwd").val(Math.random());
+                
+                var params = {};
+                params.action = "Inspection";
+                params.tt = new Date().getTime();
+                params.xjjd = $("#xjjd").val();
+                params.xjwd = $("#xjwd").val(); 
+                params.xjyh = $("#BackUsercid").val();
+                params.xjdz = $("#xjdz").val();
+                $("#ksxj").attr({ "disabled": "disabled" }).val("正在巡检...");
+                $("#sczb").attr({ "disabled": "disabled" }).val("上传坐标");
+                $.get("GetActionHandler.ashx", params, Sp.Delegate(this, getInspection));
+
+            })
+
+            function getInspection(response, status, xhr) {
+                //$("#ta_Detail").val(response);
+                var data = Sp.ParseJson(response);
+                var obj = eval('(' + response + ')');
+                
+                //alert(data.root[0].guid);
+                $("#Backguid").val(data.root[0].guid);
+
+                t1 = setInterval(function RequstJW() {
+                    $("#xjjd").val(Math.random());
+                    $("#xjwd").val(Math.random());
+                    //post方法上传坐标信息
+                    var param = { xjjd: $("#xjjd").val().trim(), xjwd: $("#xjwd").val().trim(), guid: $("#Backguid").val().trim(), xjyh: $("#BackUsercid").val().trim() };
+                    var c = new Sp.ActionRequest("InsertJWD", Sp.ToJson(param), { fn: getJWD });
+                    c.request({ url: 'ActionHandler.ashx', timeout: 120000 });
+                }, 5000);
+
+
+                if (data.success) {
+                    $("#ta_Detail").val(response);
+                }
+                else {
+                    $("#ta_Detail").val(response);
+                }
+            }
+            //开始巡检记录
+
+            $("#sczb").click(function () {
+                //post方法上传坐标信息
+                var param = { xjjd: $("#xjjd").val().trim(), xjwd: $("#xjwd").val().trim(), guid: $("#Backguid").val().trim() };
+                var c = new Sp.ActionRequest("InsertJWD", Sp.ToJson(param), { fn: getJWD });
+                $("#sczb").attr({ "disabled": "disabled" }).val("上传坐标");
+                c.request({ url: 'ActionHandler.ashx', timeout: 120000 });
+            })
+
+            function getJWD(action, data, status) {
+
+                $("#ta_Detail").val(data);
+            }
+            //结束巡检
+            $("#jsxj").click(function () {
+                clearInterval(t1);
+                var params = {};
+                params.xjguid = $("#Backguid").val().trim();
+                params.action = "Exitdate";
+                params.tt = new Date().getTime();
+                params.xjjd = $("#xjjd").val();
+                params.xjwd = $("#xjwd").val();
+                params.xjdz = $("#xjjsdz").val();
+                params.xjyh = $("#BackUsercid").val();
+                $("#jsxj").attr({ "disabled": "disabled" }).val("结束巡检...");
+                $.get("GetActionHandler.ashx", params, Sp.Delegate(this, StopInspection));
+            })
+
+            function StopInspection(response, status, xhr) {
+                var data = Sp.ParseJson(response);
+                if (data.success) {
+                    $("#ta_Detail").val(response);
+                    var datenow = new Date();
+                    $("#ksxj").val("开始巡检").removeAttr("disabled");
+                    $("#jsxj").val("结束巡检").removeAttr("disabled");
+                    $("#xjrq").val(datenow.getFullYear().toString() + "-" + datenow.getMonth().toString() + "-" + datenow.getDay().toString());
+                }
+                else {
+                    $("#ta_Detail").val(response);
+                }
+
+            }
+            //结束巡检
+            //保存巡检内容
+            $("#bcnr").click(function () {
+                //post方法上传巡检内容信息
+                var param = { xjnrjjl: $("#xjnrjjl").val().trim(),guid: $("#Backguid").val().trim() };
+                var c = new Sp.ActionRequest("InsertDataImg", Sp.ToJson(param), { fn: getDataImg });
+                c.request({ url: 'ActionHandler.ashx', timeout: 120000 });
+            })
+            function getDataImg(action, data, status) {
+                $("#ta_Detail").val(data);
+            }
+
+            $("#sctp").click(function () {
+                //post方法上传图片
+                var param = { image: $("#FilesImg").val(), guid: $("#Backguid").val().trim() };
+                var c = new Sp.ActionRequest("InsertImage", Sp.ToJson(param), { fn: getImage });
+                c.request({ url: 'ActionHandler.ashx', timeout: 120000 });
+
+
+
+            })
+            function getImage(action, data, status) {
+                $("#ta_Detail").val(data);
+            }
+            
+
+            //保存巡检内容
+
+            //#endregion
+        }
+
+        var image = "";
+        function selectImage(file) {
+            if (!file.files || !file.files[0]) {
+                return;
+            }
+            var reader = new FileReader();
+            reader.readAsDataURL(file.files[0]);
+            //reader.readAsDataURL(this.files[0]);
+            reader.onload = function (evt) {
+            document.getElementById('image').src = evt.target.result;
+            image = evt.target.result;
+            $("#FilesImg").val(encodeURI(image).replace(/\+/g, '%2B'));
+            ///var picBM = "";
+           // picBM = $("#FilesImg").val(image).replace("+", "%2B");
+           // $("#FilesImg").val(picBM);
+            }          
+            
+        }
+
+
+
+
+      
+
+    </script>
+    <style type="text/css">
+        #Text1 {
+            height: 21px;
+            width: 257px;
+        }
+
+        #TextArea1 {
+            height: 282px;
+            width: 690px;
+        }
+
+        #ta_Detail {
+            height: 483px;
+            width: 900px;
+        }
+    </style>
+</head>
+
+<body>
+    登录服务->用户名：<input type="text" value="" id="txtUserName" />&nbsp;密码：<input type="text" value="" id="txtPassword" />
+    返回用户cid：<input type="text" value="" id="BackUsercid" />
+    返回用户名：<input type="text" value="" id="BackUsername" />
+    <input id="btnLogin" type="button" value="登录测试" />
+
+    <hr />
+    分页查询服务->
+    关键字：<input type="text" value="" id="txtKeyWord" />&nbsp;
+    开始页(从1开始)：<input type="text" value="1" id="txtStart" />&nbsp;
+    每页条数：<input type="text" value="5" id="txtPageSzie" />
+    <input id="btnPaging" type="button" value="分页查询" />
+    <hr />
+    获取详情：
+    设备cid：<input type="text" value="156" id="txtCid" />
+    <input id="btnGetTerminalByCid" type="button" value="查询详情" />
+    <hr />
+    重置密码：
+    旧密码：<input type="text" id="oldPassword" />
+    新密码：<input type="text" id="newPassword" />
+    重复密码：<input type="text" id="rePassword" />
+    <input id="btnPwdReset" type="button" value="修改密码" />
+    <hr />
+    用户信息更新：
+    所属部门：<input type="text" id="department" />
+    真实姓名：<input type="text" id="name" />
+    联系电话：<input type="text" id="phone" />
+    微信号：<input type="text" id="weixin" />
+    <input id="getdata" type="button" value="获取用户" />
+    <input id="UpdateUser" type="button" value="更新用户" />
+    <hr />
+    设备详情：
+    机箱号：<input type="text" id="jxh" />
+    设备号:<input type="text" id="sbh" />
+    监控分类：<input type="text" id="jkfl" />
+    卡号:<input type="text" id="kh" />
+    名称：<input type="text" id="mc" />
+    所属单位：<input type="text" id="ssdw" />
+    单位地址：<input type="text" id="dwdz" />
+    <p>
+        定点位置X：<input type="text" id="ddwzX" />
+        定点位置Y：<input type="text" id="ddwzY" />
+        所属社区：<input type="text" id="sssq" />
+        单位联系人：<input type="text" id="dwlxr" />
+        联系人电话：<input type="text" id="lxrdh" />
+   </p>
+    <p>
+        设备图片：<input type="text" id="sbtp" />
+        设备cid：<input type="text" id="Unicid" />
+        <input id="getSbCid" type="button" value="获取设备详情" />
+    </p>
+    <hr />
+    巡检情况：
+    巡检日期：<input type= "text" id="xjrq" />
+    巡检内容及结论：<input type="text" id="xjnrjjl" />
+    巡检现场照片：<input type="text" id="xjxczp" />
+    经度：<input type="text" id="xjjd" />
+    维度：<input type="text" id="xjwd" />
+    巡检开始地址：<input type="text" id="xjdz" value="开始巡检地址" />
+    巡检结束地址：<input type="text" id="xjjsdz" value="结束巡检地址" />
+    返回Guid：<input type="text" id="Backguid" />
+    <hr />
+    <form id="uploadForm">
+        选择照片：<input type="file" id="uploadImg" onchange="selectImage(this); " />
+    </form>
+        <input type="button" id="addImg" value="添加" />
+        选择的图片：<input type="text" id="FilesImg" />
+        <input id="sctp" type="button" value="上传图片" />
+        <img id="image" style="width:50px;height:50px;" src="">
+
+        <hr />
+        <input id="ksxj" type="button" value="开始巡检" />
+        <input id="sczb" type="button" value="上传坐标" />
+        <input id="jsxj" type="button" value="结束巡检" />
+        <input id="bcnr" type="button" value="保存内容" />
+    <hr />
+    <form id="form1" runat="server" action="saveImageController.ashx">
+        选择照片：<input type="file" id="uploadImg1" onchange="selectImage(this); " />
+        选择照片：<input type="file" id="uploadImg2" onchange="selectImage(this); " />
+        选择照片：<input type="file" id="uploadImg3" onchange="selectImage(this); " />
+        选择照片：<input type="file" id="uploadImg4" onchange="selectImage(this); " />
+        巡检内容及结论：<input type="text" id="xjnrjjlList" />
+        <input id="tjxx" type="button" value="提交" />
+    </form>
+        <p>
+            <textarea id="ta_Detail" name="S1"></textarea>
+        </p>
+</body>
+</html>

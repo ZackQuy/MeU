@@ -1,0 +1,120 @@
+
+====日志开始====
+日志时间：2016-12-02 10:21:38,657 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"admin\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:21:53,993 [17] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"tianjia\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:22:21,564 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"tianjia\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:23:56,082 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"admin\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:24:19,661 [15] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"tianjia\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:25:47,963 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"tianjia\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:26:18,462 [14] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"测试用户\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:26:30,762 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"admin\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:28:42,348 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"admin\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:30:29,706 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"admin\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:30:39,071 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"tianjia\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:30:48,488 [10] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"tianjia\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:31:01,898 [15] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"tianjia\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:54:06,219 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"admin\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-02 10:54:43,337 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertJWD","RequestData":"{\"xjjd\":\"0.6454318270373764\",\"xjwd\":\"0.1460630944348119\",\"guid\":\"280\",\"xjyh\":\"9\"}","Context":"InsertJWD"} 
+
+====日志开始====
+日志时间：2016-12-02 10:54:48,344 [14] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertJWD","RequestData":"{\"xjjd\":\"0.9324638514413082\",\"xjwd\":\"0.8849945043760208\",\"guid\":\"280\",\"xjyh\":\"9\"}","Context":"InsertJWD"} 
+
+====日志开始====
+日志时间：2016-12-02 10:54:53,335 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertJWD","RequestData":"{\"xjjd\":\"0.2437512910191884\",\"xjwd\":\"0.20346347362035888\",\"guid\":\"280\",\"xjyh\":\"9\"}","Context":"InsertJWD"} 
+
+====日志开始====
+日志时间：2016-12-02 10:54:58,324 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertJWD","RequestData":"{\"xjjd\":\"0.05769459239222702\",\"xjwd\":\"0.5154572241453166\",\"guid\":\"280\",\"xjyh\":\"9\"}","Context":"InsertJWD"} 
+
+====日志开始====
+日志时间：2016-12-02 10:55:03,343 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertJWD","RequestData":"{\"xjjd\":\"0.31956809252611945\",\"xjwd\":\"0.8346024291340678\",\"guid\":\"280\",\"xjyh\":\"9\"}","Context":"InsertJWD"} 
+
+====日志开始====
+日志时间：2016-12-02 10:55:08,348 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertJWD","RequestData":"{\"xjjd\":\"0.6787669146628015\",\"xjwd\":\"0.6602548635208648\",\"guid\":\"280\",\"xjyh\":\"9\"}","Context":"InsertJWD"} 

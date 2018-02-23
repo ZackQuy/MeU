@@ -1,0 +1,426 @@
+
+====日志开始====
+日志时间：2016-12-04 10:24:01,298 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"userName\":\"admin\",\"password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 10:24:47,551 [15] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"userName\":\"admin\",\"password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 10:32:58,979 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"userName\":\"admin\",\"password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 10:33:25,023 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"userName\":\"admin\",\"password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:16:01,911 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:16:04,309 [8] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:16:09,713 [11] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"116330714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:16:11,206 [10] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"116330714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:19:58,706 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:20:43,679 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:21:56,754 [11] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:22:31,086 [15] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:23:29,104 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:23:31,516 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:27:51,196 [18] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:27:53,379 [18] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:27:56,290 [14] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:29:50,783 [17] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:29:58,238 [10] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:32:08,442 [16] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:33:56,410 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"12121@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:35:19,882 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:35:44,463 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:35:47,680 [10] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:35:52,927 [10] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"11631714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:35:56,150 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"11631714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:38:01,873 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:38:07,621 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"11630714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:38:51,181 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:38:57,260 [11] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"11631314@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:39:44,864 [17] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:40:01,963 [20] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"11631714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:47:12,807 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163130714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:47:15,864 [8] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"116313714@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:47:30,260 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"username\":\"admin\",\"type\":\"dlm\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:47:35,236 [8] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"username\":\"adm\",\"type\":\"dlm\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:48:04,779 [8] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1163112@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:48:07,605 [11] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"username\":\"admin\",\"type\":\"dlm\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 19:48:29,627 [11] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"username\":\"zzz\",\"type\":\"dlm\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:08:54,464 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:09:00,981 [10] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"username\":\"测试\",\"type\":\"dlm\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:10:44,381 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:11:21,007 [10] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:11:25,530 [9] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"username\":\"测试\",\"type\":\"dlm\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:12:29,153 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"121@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:12:32,875 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"username\":\"测试\",\"type\":\"dlm\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:15:36,748 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:15:39,787 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"username\":\"测试\",\"type\":\"dlm\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:15:49,502 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"strName\":\"测试\",\"strPassword\":\"123456\",\"useremail\":\"1212@qq.com\",\"type\":\"reg\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:18:39,962 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"12121@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:18:42,932 [11] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"username\":\"村上春树\",\"type\":\"dlm\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:18:47,129 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"strName\":\"村上春树\",\"strPassword\":\"123456\",\"useremail\":\"12121@qq.com\",\"type\":\"reg\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:20:33,782 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:20:37,011 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"username\":\"测试\",\"type\":\"dlm\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:20:40,464 [8] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"strName\":\"测试\",\"strPassword\":\"123456\",\"useremail\":\"1212@qq.com\",\"type\":\"reg\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:23:10,165 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:23:13,653 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"username\":\"测试\",\"type\":\"dlm\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:23:23,455 [7] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"strName\":\"测试\",\"strPassword\":\"123456\",\"useremail\":\"1212@qq.com\",\"type\":\"reg\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:28:43,143 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:30:01,598 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:30:03,464 [10] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"strName\":\"\",\"strPassword\":\"\",\"useremail\":\"1212@qq.com\",\"type\":\"reg\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:33:31,014 [18] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:34:29,255 [15] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:34:41,771 [19] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:35:15,281 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:37:34,351 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:37:38,958 [14] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:40:41,786 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"1212@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:41:54,452 [13] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"12@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:42:41,724 [9] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"email\":\"12@qq.com\",\"type\":\"yx\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-04 20:42:43,286 [9] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"strName\":\"\",\"strPassword\":\"\",\"useremail\":\"12@qq.com\",\"type\":\"reg\"}","Context":"login"} 

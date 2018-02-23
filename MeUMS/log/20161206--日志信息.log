@@ -1,0 +1,6 @@
+
+====日志开始====
+日志时间：2016-12-06 20:21:12,504 [19] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"strName\":\"\",\"strPassword\":\"\",\"useremail\":\"\",\"type\":\"reg\"}","Context":"login"} 

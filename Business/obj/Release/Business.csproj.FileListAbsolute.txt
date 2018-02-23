@@ -1,0 +1,15 @@
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\Business.dll
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\Business.pdb
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\Aspose.Cells.dll
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\Aspose.Words.dll
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\log4net.dll
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\Sp.BaseFrame.Common.dll
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\Sp.BaseFrame.Framework.dll
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\Sp.BaseFrame.Services.dll
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\Memcached.ClientLibrary.dll
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\bin\Release\Memcached.ClientLibrary.pdb
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\obj\Release\Business.dll
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\obj\Release\Business.pdb
+C:\Users\Administrator\Desktop\MeU\MeUMS\Business\obj\Release\Business.csprojResolveAssemblyReference.cache

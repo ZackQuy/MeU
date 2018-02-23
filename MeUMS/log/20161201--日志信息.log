@@ -1,0 +1,48 @@
+
+====日志开始====
+日志时间：2016-12-01 14:49:01,787 [6] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"login","RequestData":"{\"UserName\":\"admin\",\"Password\":\"123456\"}","Context":"login"} 
+
+====日志开始====
+日志时间：2016-12-01 14:49:14,898 [14] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertJWD","RequestData":"{\"xjjd\":\"0.08946713054271371\",\"xjwd\":\"0.8205021709497539\",\"guid\":\"275\"}","Context":"InsertJWD"} 
+
+====日志开始====
+日志时间：2016-12-01 14:49:19,910 [9] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertJWD","RequestData":"{\"xjjd\":\"0.15621435241335302\",\"xjwd\":\"0.9248374651022305\",\"guid\":\"275\"}","Context":"InsertJWD"} 
+
+====日志开始====
+日志时间：2016-12-01 14:49:24,914 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertJWD","RequestData":"{\"xjjd\":\"0.26904060800451773\",\"xjwd\":\"0.8563745128097785\",\"guid\":\"275\"}","Context":"InsertJWD"} 
+
+====日志开始====
+日志时间：2016-12-01 14:49:29,899 [11] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertJWD","RequestData":"{\"xjjd\":\"0.7111185552994941\",\"xjwd\":\"0.7542321201067856\",\"guid\":\"275\"}","Context":"InsertJWD"} 
+
+====日志开始====
+日志时间：2016-12-01 14:49:34,901 [12] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertJWD","RequestData":"{\"xjjd\":\"0.09717261496743779\",\"xjwd\":\"0.9952551628753739\",\"guid\":\"275\"}","Context":"InsertJWD"} 
+
+====日志开始====
+日志时间：2016-12-01 14:49:43,679 [10] 
+日志级别：INFO  
+日 志 类：log4net.LogManager [(null)] 
+{"Action":"InsertDataImg","RequestData":"{\"xjnrjjl\":\"恶趣味企鹅请问请问请问\",\"guid\":\"275\"}","Context":"InsertDataImg"} 
+
+====日志开始====
+日志时间：2016-12-01 14:49:43,981 [10] 
+日志级别：ERROR 
+日 志 类：log4net.LogManager [(null)] 
+插入信息详情获取异常:Unknown column 'xjnrjjl' in 'field list' 

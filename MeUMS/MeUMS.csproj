@@ -1,0 +1,1301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C10FFD9-B4F8-4297-BAF4-6B1293796C5C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GasAppService</RootNamespace>
+    <AssemblyName>GasAppService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Business\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\Business\bin\Debug\Newtonsoft.Json.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Sp.BaseFrame.Common">
+      <HintPath>..\Business\Lib\Sp.BaseFrame.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Sp.BaseFrame.Framework">
+      <HintPath>..\Business\Lib\Sp.BaseFrame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Sp.BaseFrame.Services">
+      <HintPath>..\Business\Lib\Sp.BaseFrame.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.1.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Extjs\js\bootstrap.js" />
+    <Content Include="Extjs\js\checkValidity.js" />
+    <Content Include="Extjs\js\ext-all-debug.js" />
+    <Content Include="Extjs\js\ext-all.js" />
+    <Content Include="Extjs\js\ext-lang-zh_CN.js" />
+    <Content Include="Extjs\js\extend\Ext.ux.SpJsonReader.js" />
+    <Content Include="Extjs\js\extend\ExtKindEditor.js" />
+    <Content Include="Extjs\js\extend\ExtUeditor.js" />
+    <Content Include="Extjs\js\extend\grid\FiltersFeature.js" />
+    <Content Include="Extjs\js\extend\grid\filter\BooleanFilter.js" />
+    <Content Include="Extjs\js\extend\grid\filter\DateFilter.js" />
+    <Content Include="Extjs\js\extend\grid\filter\DateTimeFilter.js" />
+    <Content Include="Extjs\js\extend\grid\filter\Filter.js" />
+    <Content Include="Extjs\js\extend\grid\filter\ListFilter.js" />
+    <Content Include="Extjs\js\extend\grid\filter\NumericFilter.js" />
+    <Content Include="Extjs\js\extend\grid\filter\StringFilter.js" />
+    <Content Include="Extjs\js\extend\grid\menu\ListMenu.js" />
+    <Content Include="Extjs\js\extend\grid\menu\RangeMenu.js" />
+    <Content Include="Extjs\js\lib\kindeditor-all.js" />
+    <Content Include="Extjs\js\lib\themes\common\anchor.gif" />
+    <Content Include="Extjs\js\lib\themes\common\blank.gif" />
+    <Content Include="Extjs\js\lib\themes\common\flash.gif" />
+    <Content Include="Extjs\js\lib\themes\common\loading.gif" />
+    <Content Include="Extjs\js\lib\themes\common\media.gif" />
+    <Content Include="Extjs\js\lib\themes\common\rm.gif" />
+    <Content Include="Extjs\js\lib\themes\default\background.png" />
+    <Content Include="Extjs\js\lib\themes\default\default.css" />
+    <Content Include="Extjs\js\lib\themes\default\default.png" />
+    <Content Include="Extjs\js\lib\themes\qq\editor.gif" />
+    <Content Include="Extjs\js\lib\themes\qq\qq.css" />
+    <Content Include="Extjs\js\lib\themes\simple\simple.css" />
+    <Content Include="Extjs\js\lib\zh_CN.js" />
+    <Content Include="Extjs\js\PagingMemoryProxy.js" />
+    <Content Include="Extjs\js\TabCloseMenu.js" />
+    <Content Include="Extjs\resources\css\ext-all-neptune.css" />
+    <Content Include="Extjs\resources\ext-theme-neptune\ext-all.css" />
+    <Content Include="Extjs\resources\ext-theme-neptune\GridFilters.css" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn-group\btn-group-default-framed-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn-group\btn-group-default-framed-notitle-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn-group\btn-group-default-framed-notitle-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn-group\btn-group-default-framed-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-disabled-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-disabled-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-disabled-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-disabled-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-focus-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-focus-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-focus-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-focus-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-over-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-over-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-over-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-over-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-pressed-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-pressed-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-pressed-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-pressed-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-large-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-disabled-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-disabled-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-disabled-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-disabled-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-focus-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-focus-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-focus-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-focus-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-over-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-over-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-over-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-over-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-pressed-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-pressed-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-pressed-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-pressed-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-medium-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-disabled-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-disabled-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-disabled-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-disabled-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-focus-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-focus-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-focus-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-focus-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-over-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-over-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-over-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-over-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-pressed-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-pressed-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-pressed-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-pressed-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-small-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-disabled-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-disabled-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-disabled-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-disabled-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-focus-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-focus-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-focus-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-focus-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-over-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-over-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-over-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-over-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-pressed-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-pressed-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-pressed-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-pressed-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-large-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-disabled-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-disabled-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-disabled-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-disabled-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-focus-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-focus-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-focus-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-focus-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-over-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-over-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-over-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-over-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-pressed-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-pressed-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-pressed-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-pressed-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-medium-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-disabled-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-disabled-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-disabled-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-disabled-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-focus-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-focus-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-focus-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-focus-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-over-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-over-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-over-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-over-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-pressed-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-pressed-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-pressed-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-pressed-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-default-toolbar-small-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-disabled-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-disabled-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-disabled-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-disabled-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-focus-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-focus-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-focus-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-focus-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-over-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-over-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-over-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-over-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-pressed-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-pressed-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-pressed-fbg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\btn\btn-plain-toolbar-small-pressed-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-large-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-large-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-large-s-arrow-b-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-large-s-arrow-b.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-large-s-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-large-s-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-medium-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-medium-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-medium-s-arrow-b-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-medium-s-arrow-b.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-medium-s-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-medium-s-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-small-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-small-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-small-s-arrow-b-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-small-s-arrow-b.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-small-s-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-small-s-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-large-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-large-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-large-s-arrow-b-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-large-s-arrow-b.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-large-s-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-medium-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-medium-s-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-small-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-small-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-small-s-arrow-b.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\default-toolbar-small-s-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-large-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-large-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-large-s-arrow-b-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-large-s-arrow-b.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-large-s-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-large-s-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-medium-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-medium-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-medium-s-arrow-b-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-medium-s-arrow-b.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-medium-s-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-medium-s-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-small-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-small-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-small-s-arrow-b-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-small-s-arrow-b.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-small-s-arrow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\button\plain-toolbar-small-s-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\datepicker\arrow-left.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\datepicker\arrow-right.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\datepicker\month-arrow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\dd\drop-add.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\dd\drop-no.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\dd\drop-yes.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\editor\tb-sprite.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\equals.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\fieldset\collapse-tool.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\checkbox.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\clear-trigger-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\clear-trigger.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\date-trigger-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\date-trigger.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\exclamation.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\radio.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\search-trigger-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\search-trigger.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\spinner-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\spinner.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\trigger-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\form\trigger.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\greater_than.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid-row-editor-buttons\grid-row-editor-buttons-default-bottom-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid-row-editor-buttons\grid-row-editor-buttons-default-top-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\col-move-bottom.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\col-move-top.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\columns.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\dd-insert-arrow-left.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\dd-insert-arrow-right.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\dirty-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\dirty.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\drop-no.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\drop-yes.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\group-by.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\group-collapse.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\group-expand-sprite.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\group-expand.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\hd-pop.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\hmenu-asc.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\hmenu-desc.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\hmenu-lock.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\hmenu-unlock.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\loading.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\page-first.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\page-last.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\page-next.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\page-prev.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\pick-button.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\refresh.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\sort_asc.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\grid\sort_desc.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\less_than.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\loadmask\loading.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\menu\checked.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\menu\group-checked.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\menu\menu-item-active-bg.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\menu\menu-parent-left.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\menu\menu-parent.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\menu\scroll-bottom.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\menu\scroll-top.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\menu\unchecked.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-bottom-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-bottom-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-collapsed-bottom-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-collapsed-bottom-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-collapsed-left-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-collapsed-left-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-collapsed-left-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-collapsed-right-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-collapsed-right-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-collapsed-right-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-collapsed-top-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-collapsed-top-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-left-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-left-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-left-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-right-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-right-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-right-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-top-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-default-framed-top-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-bottom-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-bottom-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-collapsed-bottom-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-collapsed-bottom-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-collapsed-left-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-collapsed-left-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-collapsed-left-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-collapsed-right-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-collapsed-right-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-collapsed-right-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-collapsed-top-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-collapsed-top-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-left-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-left-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-left-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-right-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-right-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-right-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-top-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel-header\panel-header-light-framed-top-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel\panel-default-framed-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel\panel-default-framed-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel\panel-light-framed-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\panel\panel-light-framed-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\shared\icon-error.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\shared\icon-info.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\shared\icon-question.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\shared\icon-warning.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\sizer\e-handle.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\sizer\ne-handle.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\sizer\nw-handle.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\sizer\s-handle.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\sizer\se-handle.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\sizer\sw-handle.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\slider\slider-bg.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\slider\slider-thumb.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\slider\slider-v-bg.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\slider\slider-v-thumb.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab-bar\default-plain-scroll-bottom.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab-bar\default-plain-scroll-left.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab-bar\default-plain-scroll-right.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab-bar\default-plain-scroll-top.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab-bar\default-scroll-bottom.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab-bar\default-scroll-left.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab-bar\default-scroll-right.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab-bar\default-scroll-top.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-bottom-active-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-bottom-active-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-bottom-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-bottom-disabled-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-bottom-disabled-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-bottom-over-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-bottom-over-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-bottom-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-close.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-top-active-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-top-active-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-top-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-top-disabled-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-top-disabled-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-top-over-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-top-over-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tab\tab-default-top-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tip\tip-default-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tip\tip-default-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tip\tip-form-invalid-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tip\tip-form-invalid-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\toolbar\more.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\toolbar\scroll-left.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\toolbar\scroll-right.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tools\tool-sprites-dark.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tools\tool-sprites.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\arrows-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\arrows.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\drop-above.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\drop-add.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\drop-append.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\drop-below.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\drop-between.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\drop-no.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\drop-over.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\drop-under.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\drop-yes.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-end-minus-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-end-minus.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-end-plus-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-end-plus.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-end-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-end.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-line-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-line.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-minus-nl-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-minus-nl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-minus-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-minus.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-plus-nl-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-plus-nl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-plus-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-plus.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\elbow.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\folder-open-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\folder-open.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\folder-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\folder.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\leaf-rtl.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\leaf.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\tree\loading.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\util\splitter\mini-bottom.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\util\splitter\mini-left.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\util\splitter\mini-right.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\util\splitter\mini-top.png" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-bottom-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-bottom-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-collapsed-bottom-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-collapsed-bottom-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-collapsed-left-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-collapsed-left-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-collapsed-left-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-collapsed-right-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-collapsed-right-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-collapsed-right-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-collapsed-top-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-collapsed-top-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-left-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-left-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-left-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-right-corners-rtl.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-right-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-right-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-top-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window-header\window-header-default-top-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window\window-default-corners.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\images\window\window-default-sides.gif" />
+    <Content Include="Extjs\resources\ext-theme-neptune\RangeMenu.css" />
+    <Content Include="Global.asax" />
+    <Content Include="img\f_left.png" />
+    <Content Include="img\f_right.png" />
+    <Content Include="pic\m.png" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\78-EUC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\78-EUC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\78-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\78-RKSJ-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\78-RKSJ-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\78-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\78ms-RKSJ-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\78ms-RKSJ-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\83pv-RKSJ-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\90ms-RKSJ-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\90ms-RKSJ-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\90msp-RKSJ-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\90msp-RKSJ-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\90pv-RKSJ-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\90pv-RKSJ-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Add-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Add-RKSJ-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Add-RKSJ-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Add-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-CNS1-0.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-CNS1-1.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-CNS1-2.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-CNS1-3.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-CNS1-4.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-CNS1-5.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-CNS1-6.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-CNS1-UCS2.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-GB1-0.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-GB1-1.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-GB1-2.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-GB1-3.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-GB1-4.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-GB1-5.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-GB1-UCS2.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Japan1-0.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Japan1-1.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Japan1-2.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Japan1-3.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Japan1-4.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Japan1-5.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Japan1-6.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Japan1-UCS2.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Korea1-0.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Korea1-1.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Korea1-2.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Adobe-Korea1-UCS2.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\B5-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\B5-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\B5pc-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\B5pc-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\CNS-EUC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\CNS-EUC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\CNS1-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\CNS1-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\CNS2-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\CNS2-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\ETen-B5-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\ETen-B5-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\ETenms-B5-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\ETenms-B5-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\ETHK-B5-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\ETHK-B5-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\EUC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\EUC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Ext-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Ext-RKSJ-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Ext-RKSJ-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Ext-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GB-EUC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GB-EUC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GB-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GB-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBK-EUC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBK-EUC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBK2K-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBK2K-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBKp-EUC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBKp-EUC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBpc-EUC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBpc-EUC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBT-EUC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBT-EUC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBT-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBT-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBTpc-EUC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\GBTpc-EUC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Hankaku.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Hiragana.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKdla-B5-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKdla-B5-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKdlb-B5-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKdlb-B5-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKgccs-B5-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKgccs-B5-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKm314-B5-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKm314-B5-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKm471-B5-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKm471-B5-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKscs-B5-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\HKscs-B5-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Katakana.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSC-EUC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSC-EUC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSC-Johab-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSC-Johab-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSCms-UHC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSCms-UHC-HW-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSCms-UHC-HW-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSCms-UHC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSCpc-EUC-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\KSCpc-EUC-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\LICENSE" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\NWP-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\NWP-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\RKSJ-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\RKSJ-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\Roman.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniCNS-UCS2-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniCNS-UCS2-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniCNS-UTF16-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniCNS-UTF16-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniCNS-UTF32-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniCNS-UTF32-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniCNS-UTF8-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniCNS-UTF8-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniGB-UCS2-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniGB-UCS2-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniGB-UTF16-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniGB-UTF16-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniGB-UTF32-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniGB-UTF32-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniGB-UTF8-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniGB-UTF8-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS-UCS2-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS-UCS2-HW-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS-UCS2-HW-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS-UCS2-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS-UTF16-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS-UTF16-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS-UTF32-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS-UTF32-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS-UTF8-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS-UTF8-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS2004-UTF16-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS2004-UTF16-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS2004-UTF32-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS2004-UTF32-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS2004-UTF8-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJIS2004-UTF8-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJISPro-UCS2-HW-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJISPro-UCS2-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJISPro-UTF8-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJISX0213-UTF32-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJISX0213-UTF32-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJISX02132004-UTF32-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniJISX02132004-UTF32-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniKS-UCS2-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniKS-UCS2-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniKS-UTF16-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniKS-UTF16-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniKS-UTF32-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniKS-UTF32-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniKS-UTF8-H.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\UniKS-UTF8-V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\V.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\cmaps\WP-Symbol.bcmap" />
+    <Content Include="PlugIns\pdfjs\web\compressed.tracemonkey-pldi-09.pdf" />
+    <Content Include="PlugIns\pdfjs\web\locale\ach\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\af\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ak\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\an\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ar\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ast\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\as\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\az\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\be\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\bg\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\bn-BD\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\bn-IN\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\br\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\bs\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ca\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\csb\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\cs\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\cy\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\da\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\de\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\el\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\en-GB\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\en-US\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\en-ZA\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\eo\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\es-AR\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\es-CL\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\es-ES\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\es-MX\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\et\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\eu\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\fa\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ff\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\fi\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\fr\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\fy-NL\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ga-IE\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\gd\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\gl\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\gu-IN\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\he\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\hi-IN\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\hr\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\hu\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\hy-AM\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\id\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\is\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\it\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ja\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ka\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\kk\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\km\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\kn\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ko\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ku\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\lg\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\lij\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\locale.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\lt\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\lv\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\mai\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\mk\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ml\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\mn\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\mr\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ms\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\my\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\nb-NO\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\nl\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\nn-NO\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\nso\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\oc\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\or\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\pa-IN\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\pl\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\pt-BR\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\pt-PT\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\rm\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ro\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ru\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\rw\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\sah\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\si\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\sk\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\sl\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\son\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\sq\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\sr\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\sv-SE\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\sw\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ta-LK\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ta\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\te\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\th\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\tl\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\tn\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\tr\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\uk\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\ur\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\vi\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\wo\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\xh\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\zh-CN\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\zh-TW\viewer.properties" />
+    <Content Include="PlugIns\pdfjs\web\locale\zu\viewer.properties" />
+    <Content Include="PlugIns\videojs\demo.captions.vtt" />
+    <Content Include="PlugIns\videojs\font\vjs.eot" />
+    <Content Include="PlugIns\videojs\font\vjs.ttf" />
+    <Content Include="PlugIns\videojs\font\vjs.woff" />
+    <Content Include="PlugIns\videojs\video-js.less" />
+    <Content Include="Configs\microsoft.web.infrastructure.1.0.0.nupkg" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\WJTPipeline.pubxml" />
+    <None Include="Properties\PublishProfiles\WJTPipelineJY.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configs\Objects.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="img\appDown.png" />
+    <Content Include="img\Backg2.png" />
+    <Content Include="img\Backg3.png" />
+    <Content Include="img\Backgrond.png" />
+    <Content Include="img\bg2.gif" />
+    <Content Include="img\Btn_Down.png" />
+    <Content Include="img\foot.png" />
+    <Content Include="img\foot2.png" />
+    <Content Include="img\ico1.png" />
+    <Content Include="img\ico2.png" />
+    <Content Include="img\ico3.png" />
+    <Content Include="img\ico4.png" />
+    <Content Include="img\ico5.png" />
+    <Content Include="img\ico6.png" />
+    <Content Include="img\ico7.png" />
+    <Content Include="img\ico8.png" />
+    <Content Include="img\img_1.png" />
+    <Content Include="img\img_2.png" />
+    <Content Include="img\img_3.png" />
+    <Content Include="img\Plan1.png" />
+    <Content Include="img\Plan10.png" />
+    <Content Include="img\Plan2.png" />
+    <Content Include="img\Plan3.png" />
+    <Content Include="img\Plan4.png" />
+    <Content Include="img\Plan5.png" />
+    <Content Include="img\Plan6.png" />
+    <Content Include="img\Plan7.png" />
+    <Content Include="img\Plan8.png" />
+    <Content Include="img\Plan9.png" />
+    <Content Include="img\Screenshot_2015-07-20-20-31-56.jpeg" />
+    <Content Include="img\Screenshot_2015-07-21-13-24-29.jpeg" />
+    <Content Include="img\Screenshot_2015-07-21-15-10-21.jpeg" />
+    <Content Include="img\Screenshot_2015-08-24-16-26-23.jpeg" />
+    <Content Include="img\Trip1.png" />
+    <Content Include="img\Trip2.png" />
+    <Content Include="img\Trip3.png" />
+    <Content Include="img\Trip4.png" />
+    <Content Include="img\Trip5.png" />
+    <Content Include="img\Trip6.png" />
+    <Content Include="img\Trip7.png" />
+    <Content Include="img\Trip8.png" />
+    <Content Include="JS\ideal-image-slider.js" />
+    <Content Include="JS\ideal-image-slider.min.js" />
+    <Content Include="JS\iis-bullet-nav.js" />
+    <Content Include="JS\iis-captions.js" />
+    <Content Include="JS\jquery-1.4.4.min.js" />
+    <Content Include="JS\jquery.XYTipsWindow.min.2.8.js" />
+    <Content Include="Main.aspx" />
+    <Content Include="page\LoginPage.aspx" />
+    <Content Include="page\RegPage.aspx" />
+    <Content Include="page\youjiList.aspx" />
+    <Content Include="pic\appshow.png" />
+    <Content Include="pic\captcha.jpg" />
+    <Content Include="pic\Close1.png" />
+    <Content Include="pic\Close2.png" />
+    <Content Include="pic\creatyouji.png" />
+    <Content Include="pic\destination_icons.png" />
+    <Content Include="pic\eee.jpg" />
+    <Content Include="pic\erweima .png" />
+    <Content Include="pic\erweima1.png" />
+    <Content Include="pic\gerennumber.png" />
+    <Content Include="pic\heng.png" />
+    <Content Include="pic\ico.png" />
+    <Content Include="pic\img1.png" />
+    <Content Include="pic\img2.png" />
+    <Content Include="pic\img3.png" />
+    <Content Include="pic\lianjie.png" />
+    <Content Include="pic\lianjie2.png" />
+    <Content Include="pic\Line1.png" />
+    <Content Include="pic\Line2.png" />
+    <Content Include="pic\loading.gif" />
+    <Content Include="pic\login_button.png" />
+    <Content Include="pic\logo.png" />
+    <Content Include="pic\logo2.png" />
+    <Content Include="pic\LogoTile.png" />
+    <Content Include="pic\logoTile2.png" />
+    <Content Include="pic\noyouji.png" />
+    <Content Include="pic\pic1.png" />
+    <Content Include="pic\pic2.png" />
+    <Content Include="pic\pic3.png" />
+    <Content Include="pic\QQ1.png" />
+    <Content Include="pic\QQ2.png" />
+    <Content Include="pic\qqkongjian.png" />
+    <Content Include="pic\qqkongjian2.png" />
+    <Content Include="pic\reg_bg.png" />
+    <Content Include="pic\search.png" />
+    <Content Include="pic\sence1.png" />
+    <Content Include="pic\sence2.png" />
+    <Content Include="pic\sence3.png" />
+    <Content Include="pic\sence4.png" />
+    <Content Include="pic\split.png" />
+    <Content Include="pic\three1.png" />
+    <Content Include="pic\Trip.png" />
+    <Content Include="pic\TripPlan.png" />
+    <Content Include="pic\weixin.png" />
+    <Content Include="pic\weixin1.png" />
+    <Content Include="pic\weixin2.png" />
+    <Content Include="pic\xinlang1.png" />
+    <Content Include="pic\xinlang2.png" />
+    <Content Include="pic\xinlangweibo.png" />
+    <Content Include="pic\xinlangweibo2.png" />
+    <Content Include="pic\游记1.png" />
+    <Content Include="pic\游记2.png" />
+    <Content Include="pic\游记3.png" />
+    <Content Include="PlugIns\artDialog\artDialog.js" />
+    <Content Include="PlugIns\artDialog\artDialog.source.js" />
+    <Content Include="PlugIns\artDialog\plugins\iframeTools.js" />
+    <Content Include="PlugIns\artDialog\plugins\iframeTools.source.js" />
+    <Content Include="PlugIns\artDialog\skins\aero.css" />
+    <Content Include="PlugIns\artDialog\skins\aero\aero_s.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\aero_s2.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\ie6\aui_close.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\ie6\aui_e.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\ie6\aui_n.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\ie6\aui_ne.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\ie6\aui_nw.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\ie6\aui_s.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\ie6\aui_se.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\ie6\aui_sw.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="PlugIns\artDialog\skins\aero\ie6\aui_w.png" />
+    <Content Include="PlugIns\artDialog\skins\black.css" />
+    <Content Include="PlugIns\artDialog\skins\black\bg.png" />
+    <Content Include="PlugIns\artDialog\skins\black\bg2.png" />
+    <Content Include="PlugIns\artDialog\skins\black\bg_css3.png" />
+    <Content Include="PlugIns\artDialog\skins\black\bg_css3_2.png" />
+    <Content Include="PlugIns\artDialog\skins\black\ie6\close.hover.png" />
+    <Content Include="PlugIns\artDialog\skins\black\ie6\close.png" />
+    <Content Include="PlugIns\artDialog\skins\black\ie6\e.png" />
+    <Content Include="PlugIns\artDialog\skins\black\ie6\n.png" />
+    <Content Include="PlugIns\artDialog\skins\black\ie6\ne.png" />
+    <Content Include="PlugIns\artDialog\skins\black\ie6\nw.png" />
+    <Content Include="PlugIns\artDialog\skins\black\ie6\s.png" />
+    <Content Include="PlugIns\artDialog\skins\black\ie6\se.png" />
+    <Content Include="PlugIns\artDialog\skins\black\ie6\sw.png" />
+    <Content Include="PlugIns\artDialog\skins\black\ie6\w.png" />
+    <Content Include="PlugIns\artDialog\skins\blue.css" />
+    <Content Include="PlugIns\artDialog\skins\blue\bg.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\bg2.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\bg_css3.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\bg_css3_2.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\ie6\close.hover.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\ie6\close.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\ie6\e.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\ie6\n.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\ie6\ne.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\ie6\nw.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\ie6\s.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\ie6\se.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\ie6\sw.png" />
+    <Content Include="PlugIns\artDialog\skins\blue\ie6\w.png" />
+    <Content Include="PlugIns\artDialog\skins\chrome.css" />
+    <Content Include="PlugIns\artDialog\skins\chrome\border.png" />
+    <Content Include="PlugIns\artDialog\skins\chrome\chrome_s.png" />
+    <Content Include="PlugIns\artDialog\skins\default.css" />
+    <Content Include="PlugIns\artDialog\skins\green.css" />
+    <Content Include="PlugIns\artDialog\skins\green\bg.png" />
+    <Content Include="PlugIns\artDialog\skins\green\bg2.png" />
+    <Content Include="PlugIns\artDialog\skins\green\bg_css3.png" />
+    <Content Include="PlugIns\artDialog\skins\green\bg_css3_2.png" />
+    <Content Include="PlugIns\artDialog\skins\green\color_bg.png" />
+    <Content Include="PlugIns\artDialog\skins\green\ie6\close.hover.png" />
+    <Content Include="PlugIns\artDialog\skins\green\ie6\close.png" />
+    <Content Include="PlugIns\artDialog\skins\green\ie6\e.png" />
+    <Content Include="PlugIns\artDialog\skins\green\ie6\n.png" />
+    <Content Include="PlugIns\artDialog\skins\green\ie6\ne.png" />
+    <Content Include="PlugIns\artDialog\skins\green\ie6\nw.png" />
+    <Content Include="PlugIns\artDialog\skins\green\ie6\s.png" />
+    <Content Include="PlugIns\artDialog\skins\green\ie6\se.png" />
+    <Content Include="PlugIns\artDialog\skins\green\ie6\sw.png" />
+    <Content Include="PlugIns\artDialog\skins\green\ie6\w.png" />
+    <Content Include="PlugIns\artDialog\skins\icons\error.png" />
+    <Content Include="PlugIns\artDialog\skins\icons\face-sad.png" />
+    <Content Include="PlugIns\artDialog\skins\icons\face-smile.png" />
+    <Content Include="PlugIns\artDialog\skins\icons\loading.gif" />
+    <Content Include="PlugIns\artDialog\skins\icons\question.png" />
+    <Content Include="PlugIns\artDialog\skins\icons\save.png" />
+    <Content Include="PlugIns\artDialog\skins\icons\succeed.png" />
+    <Content Include="PlugIns\artDialog\skins\icons\warning.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog.css" />
+    <Content Include="PlugIns\artDialog\skins\idialog\idialog_s.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog\idialog_s2.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog\ie6\aui_close.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog\ie6\aui_e.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog\ie6\aui_n.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog\ie6\aui_s.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog\ie6\aui_se.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="PlugIns\artDialog\skins\idialog\ie6\aui_w.png" />
+    <Content Include="PlugIns\artDialog\skins\opera.css" />
+    <Content Include="PlugIns\artDialog\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="PlugIns\artDialog\skins\opera\ie6\aui_close.png" />
+    <Content Include="PlugIns\artDialog\skins\opera\ie6\aui_e.png" />
+    <Content Include="PlugIns\artDialog\skins\opera\ie6\aui_n.png" />
+    <Content Include="PlugIns\artDialog\skins\opera\ie6\aui_ne.png" />
+    <Content Include="PlugIns\artDialog\skins\opera\ie6\aui_nw.png" />
+    <Content Include="PlugIns\artDialog\skins\opera\ie6\aui_s.png" />
+    <Content Include="PlugIns\artDialog\skins\opera\ie6\aui_se.png" />
+    <Content Include="PlugIns\artDialog\skins\opera\ie6\aui_sw.png" />
+    <Content Include="PlugIns\artDialog\skins\opera\ie6\aui_w.png" />
+    <Content Include="PlugIns\artDialog\skins\opera\s1.png" />
+    <Content Include="PlugIns\artDialog\skins\opera\s2.png" />
+    <Content Include="PlugIns\artDialog\skins\simple.css" />
+    <Content Include="PlugIns\artDialog\skins\twitter.css" />
+    <Content Include="PlugIns\echartsV227\chart\bar.js" />
+    <Content Include="PlugIns\echartsV227\chart\chord.js" />
+    <Content Include="PlugIns\echartsV227\chart\eventRiver.js" />
+    <Content Include="PlugIns\echartsV227\chart\force.js" />
+    <Content Include="PlugIns\echartsV227\chart\funnel.js" />
+    <Content Include="PlugIns\echartsV227\chart\gauge.js" />
+    <Content Include="PlugIns\echartsV227\chart\heatmap.js" />
+    <Content Include="PlugIns\echartsV227\chart\k.js" />
+    <Content Include="PlugIns\echartsV227\chart\line.js" />
+    <Content Include="PlugIns\echartsV227\chart\map.js" />
+    <Content Include="PlugIns\echartsV227\chart\pie.js" />
+    <Content Include="PlugIns\echartsV227\chart\radar.js" />
+    <Content Include="PlugIns\echartsV227\chart\scatter.js" />
+    <Content Include="PlugIns\echartsV227\chart\tree.js" />
+    <Content Include="PlugIns\echartsV227\chart\treemap.js" />
+    <Content Include="PlugIns\echartsV227\chart\venn.js" />
+    <Content Include="PlugIns\echartsV227\chart\wordCloud.js" />
+    <Content Include="PlugIns\echartsV227\echarts-all.js" />
+    <Content Include="PlugIns\echartsV227\echarts.js" />
+    <Content Include="PlugIns\jcarousellite\demo-20.html" />
+    <Content Include="PlugIns\jcarousellite\script\jquery-1.11.1.js" />
+    <Content Include="PlugIns\jcarousellite\script\jquery.easing-1.3.js" />
+    <Content Include="PlugIns\jcarousellite\script\jquery.easing.compatibility.js" />
+    <Content Include="PlugIns\jcarousellite\script\jquery.jcarousellite.js" />
+    <Content Include="PlugIns\jcarousellite\script\jquery.jcarousellite.min.js" />
+    <Content Include="PlugIns\jcarousellite\script\jquery.mousewheel-3.1.12.js" />
+    <Content Include="PlugIns\jcarousellite\style\style-demo.css" />
+    <Content Include="PlugIns\JqueryResize\jquery.ba-resize.min.js" />
+    <Content Include="PlugIns\JqueryUI\tabs\jquery.tabs.js" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\ejquery.ui.theme.min.css" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\animated-overlay.gif" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\attack.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\hover.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\nomal.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\jquery-ui.css" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\jquery.ui.accordion.min.css" />
+    <Content Include="PlugIns\JqueryUI\themes\ui-lightness\minified\jquery.ui.theme.min.css" />
+    <Content Include="PlugIns\JqueryUI\ui\minified\jquery.ui.accordion.min.js" />
+    <Content Include="PlugIns\JqueryUI\ui\minified\jquery.ui.core.min.js" />
+    <Content Include="PlugIns\JqueryUI\ui\minified\jquery.ui.datepicker.js" />
+    <Content Include="PlugIns\JqueryUI\ui\minified\jquery.ui.mouse.min.js" />
+    <Content Include="PlugIns\JqueryUI\ui\minified\jquery.ui.selectable.min.js" />
+    <Content Include="PlugIns\JqueryUI\ui\minified\jquery.ui.widget.min.js" />
+    <Content Include="PlugIns\pdfjs\build\pdf.js" />
+    <Content Include="PlugIns\pdfjs\build\pdf.worker.js" />
+    <Content Include="PlugIns\pdfjs\web\compatibility.js" />
+    <Content Include="PlugIns\pdfjs\web\debugger.js" />
+    <Content Include="PlugIns\pdfjs\web\images\annotation-check.svg" />
+    <Content Include="PlugIns\pdfjs\web\images\annotation-comment.svg" />
+    <Content Include="PlugIns\pdfjs\web\images\annotation-help.svg" />
+    <Content Include="PlugIns\pdfjs\web\images\annotation-insert.svg" />
+    <Content Include="PlugIns\pdfjs\web\images\annotation-key.svg" />
+    <Content Include="PlugIns\pdfjs\web\images\annotation-newparagraph.svg" />
+    <Content Include="PlugIns\pdfjs\web\images\annotation-noicon.svg" />
+    <Content Include="PlugIns\pdfjs\web\images\annotation-note.svg" />
+    <Content Include="PlugIns\pdfjs\web\images\annotation-paragraph.svg" />
+    <Content Include="PlugIns\pdfjs\web\images\findbarButton-next%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\findbarButton-next-rtl%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\findbarButton-next-rtl.png" />
+    <Content Include="PlugIns\pdfjs\web\images\findbarButton-next.png" />
+    <Content Include="PlugIns\pdfjs\web\images\findbarButton-previous%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\findbarButton-previous-rtl%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\findbarButton-previous-rtl.png" />
+    <Content Include="PlugIns\pdfjs\web\images\findbarButton-previous.png" />
+    <Content Include="PlugIns\pdfjs\web\images\grab.cur" />
+    <Content Include="PlugIns\pdfjs\web\images\grabbing.cur" />
+    <Content Include="PlugIns\pdfjs\web\images\loading-icon.gif" />
+    <Content Include="PlugIns\pdfjs\web\images\loading-small%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\loading-small.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-documentProperties%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-documentProperties.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-firstPage%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-firstPage.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-handTool%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-handTool.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-lastPage%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-lastPage.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-rotateCcw%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-rotateCcw.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-rotateCw%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\secondaryToolbarButton-rotateCw.png" />
+    <Content Include="PlugIns\pdfjs\web\images\shadow.png" />
+    <Content Include="PlugIns\pdfjs\web\images\texture.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-bookmark%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-bookmark.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-download%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-download.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-menuArrows%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-menuArrows.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-openFile%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-openFile.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-pageDown%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-pageDown-rtl%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-pageDown-rtl.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-pageDown.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-pageUp%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-pageUp-rtl%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-pageUp-rtl.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-pageUp.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-presentationMode%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-presentationMode.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-print%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-print.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-search%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-search.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-secondaryToolbarToggle.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-sidebarToggle%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-sidebarToggle-rtl.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-sidebarToggle.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-viewAttachments%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-viewAttachments.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-viewOutline%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-viewOutline-rtl%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-viewOutline-rtl.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-viewOutline.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-viewThumbnail%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-viewThumbnail.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-zoomIn%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-zoomIn.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-zoomOut%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\toolbarButton-zoomOut.png" />
+    <Content Include="PlugIns\pdfjs\web\images\treeitem-collapsed%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\treeitem-collapsed-rtl%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\treeitem-collapsed-rtl.png" />
+    <Content Include="PlugIns\pdfjs\web\images\treeitem-collapsed.png" />
+    <Content Include="PlugIns\pdfjs\web\images\treeitem-expanded%402x.png" />
+    <Content Include="PlugIns\pdfjs\web\images\treeitem-expanded.png" />
+    <Content Include="PlugIns\pdfjs\web\l10n.js" />
+    <Content Include="PlugIns\pdfjs\web\viewer.css" />
+    <Content Include="PlugIns\pdfjs\web\viewer.html" />
+    <Content Include="PlugIns\pdfjs\web\viewer.js" />
+    <Content Include="PlugIns\videojs\demo.html" />
+    <Content Include="PlugIns\videojs\demo.mp4" />
+    <Content Include="PlugIns\videojs\font\vjs.svg" />
+    <Content Include="PlugIns\videojs\video-js.css" />
+    <Content Include="PlugIns\videojs\video-js.min.css" />
+    <Content Include="PlugIns\videojs\video-js.swf" />
+    <Content Include="PlugIns\videojs\video.dev.js" />
+    <Content Include="PlugIns\videojs\video.js" />
+    <Content Include="Scripts\Base\SpBaseCommonMin.js" />
+    <Content Include="Scripts\Base\SpCommon.js" />
+    <Content Include="Scripts\Base\SpDialogForm.js" />
+    <Content Include="Scripts\Base\SpEffectsConfig.js" />
+    <Content Include="Scripts\Base\SpGlobeV4.0.js" />
+    <Content Include="Scripts\Base\SpMap-Min.js" />
+    <Content Include="Scripts\Base\SpPrjSession.js" />
+    <Content Include="Scripts\Base\SpResultGrid.js" />
+    <Content Include="Scripts\Base\SpUtil.js" />
+    <Content Include="Scripts\Base\SpUtility-MinV4.2.js" />
+    <Content Include="Scripts\Business\CookieControl.js" />
+    <Content Include="Scripts\Business\IndexInit.js" />
+    <Content Include="Scripts\Business\Login.js" />
+    <Content Include="style\base.css" />
+    <Content Include="style\box_style.css" />
+    <Content Include="style\default.css" />
+    <Content Include="style\ideal-image-slider.css" />
+    <Content Include="style\normalize.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\RegPage.aspx.cs">
+      <DependentUpon>RegPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\youjiList.aspx.cs">
+      <DependentUpon>youjiList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{d756d1ba-d06e-4c4a-896c-36bdde01e1cf}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\Config\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2836</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2836/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
